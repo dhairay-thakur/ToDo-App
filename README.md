@@ -7,6 +7,7 @@ Functionalities provided-
 * Clean and Minimal UI.
 
 ## [Link to Demo Video (YouTube)](https://youtu.be/wS-IqykvP7Y) 
+## [Link to Download Apk](https://drive.google.com/file/d/1lHI5Df72ucaOdAAP2Lwol1IQzmAqF98t/view?usp=sharing)
 
 ## Screenshots -
 
