@@ -1,6 +1,7 @@
 package com.thakursaab.todoapp.views;
 import android.content.ClipData;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.text.Html;
 import android.util.SparseBooleanArray;
@@ -124,12 +125,14 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
             //strikethrough enabled
             holder.note.setPaintFlags(holder.note.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             holder.LL.setVisibility(View.VISIBLE);
+            holder.note.setTextColor(Color.GRAY);
             holder.checkBox.setVisibility(View.INVISIBLE);
         }
         else{
             //strikethrough removed
             holder.note.setPaintFlags(holder.note.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
             holder.LL.setVisibility(View.INVISIBLE);
+            holder.note.setTextColor(Color.BLACK);
             holder.checkBox.setVisibility(View.VISIBLE);
         }
         holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -138,6 +141,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
                 note.setSelected(b);
                 if(b){
                     holder.note.setPaintFlags(holder.note.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                    holder.note.setTextColor(Color.GRAY);
                     holder.LL.setVisibility(View.VISIBLE);
                     holder.checkBox.setVisibility(View.INVISIBLE);
                 }
@@ -149,6 +153,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
                 //undo button does the same work as uncheck
                 holder.note.setPaintFlags(holder.note.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
                 holder.LL.setVisibility(View.INVISIBLE);
+                holder.note.setTextColor(Color.BLACK);
                 holder.checkBox.setVisibility(View.VISIBLE);
                 holder.checkBox.setChecked(false);
             }
